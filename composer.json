@@ -1,5 +1,10 @@
 {
     "name": "ensiie/tp-web",
     "type": "project",
+    "scripts": {
+        "db.start": "sudo service postgresql start",
+        "db.setup": "./database/setup.sh"
+        
+    },
     "require": {}
 }
