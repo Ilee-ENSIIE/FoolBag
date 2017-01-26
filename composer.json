@@ -2,9 +2,10 @@
     "name": "ensiie/tp-web",
     "type": "project",
     "scripts": {
-        "db.start": "sudo service postgresql start",
-        "db.setup": "./database/setup.sh"
-        
+        "db.up": "sudo service postgresql start && ./database/up.sh",
+        "db.down": "./database/down.sh && sudo service postgresql stop",
+        "db.reser": "composer db.down && composer db.up",
+        "db.shell": "PGPASSWORD=tp_web psql -U tp_web -h localhost tp_web"
     },
     "require": {}
 }

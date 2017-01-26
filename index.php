@@ -13,6 +13,9 @@ try {
     foreach($dbh->query("select '✓ postgres connection' as test;") as $row) {
         print_r($row);
     }
+    foreach($dbh->query("select * from test;") as $row) {
+        print_r($row);
+    }
     $dbh = null;
 } catch (PDOException $e) {
     print "Error!: " . $e->getMessage() . "<br/>";
