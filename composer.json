@@ -4,8 +4,11 @@
     "scripts": {
         "db.up": "sudo service postgresql start && ./database/up.sh",
         "db.down": "./database/down.sh && sudo service postgresql stop",
-        "db.reser": "composer db.down && composer db.up",
-        "db.shell": "PGPASSWORD=tp_web psql -U tp_web -h localhost tp_web"
+        "db.reset": "composer db.down && composer db.up",
+        "test": "composer test.unit && composer test.lint",
+        "test.unit": "./vendor/bin/phpunit"
     },
-    "require": {}
+    "require": {
+        "phpunit/phpunit": "^4.8"
+    }
 }
