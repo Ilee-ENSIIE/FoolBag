@@ -1,8 +1,11 @@
 <?php
 
-namespace App;
+namespace AppTest;
 
-use App\sum as mySum;
+// http://stackoverflow.com/a/4737275/2523414
+require_once 'sum.php';
+
+use function App\sum as mySum;
 use PHPUnit\Framework\TestCase;
 
 class SumTest extends TestCase

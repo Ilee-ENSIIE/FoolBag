@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit colors="true">
+<phpunit colors="true" bootstrap="./vendor/autoload.php">
     <testsuites>
         <testsuite name="tp_web_ensiie">
-            <directory>./src/App</directory>
+            <directory suffix="test.php">./src/App</directory>
         </testsuite>
     </testsuites>
 </phpunit>
