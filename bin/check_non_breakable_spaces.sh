@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
-
-non_breakable_space=" "
-lines_with_errors=$(grep -r $non_breakable_space ./src ./database)
+lines_with_errors=$(grep -rnP "\xA0" src database)
 
 if [[ ${lines_with_errors} ]]; then
     echo "You have non-breakable spaces, please remove them"

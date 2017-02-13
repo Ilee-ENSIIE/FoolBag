@@ -2,13 +2,10 @@
 
 namespace AppTest;
 
-// http://stackoverflow.com/a/4737275/2523414
-require_once 'sum.php';
-
-use function App\sum as mySum;
+use App\Example;
 use PHPUnit\Framework\TestCase;
 
-class SumTest extends TestCase
+class ExampleTest extends TestCase
 {
     /**
      * Provide test data for the sum function
@@ -33,6 +30,7 @@ class SumTest extends TestCase
      */
     public function testSum($left, $right, $expected)
     {
-        $this->assertEquals($expected, mySum($left, $right));
+        $example = new Example();
+        $this->assertEquals($expected, $example->sum($left, $right));
     }
 }
