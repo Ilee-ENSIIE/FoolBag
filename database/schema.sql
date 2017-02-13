@@ -32,7 +32,7 @@ $$ LANGUAGE sql;
 
 create table test(
     id serial primary key,
-    my_column varchar not null
+    whatever varchar not null
 );
 
 
@@ -44,7 +44,7 @@ create table test(
 ---------------------------
 
 -- insert 100 random strings of length 20
-insert into test (my_column) 
+insert into test (whatever) 
     select random_string(20)
     from generate_series(1, 100)
 ;

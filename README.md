@@ -25,3 +25,8 @@ composer test.lint.fix       # php cs-fixer
 composer test.md             # php mess detector (md)
 composer test.dependencies   # check for outdated external dependencies
 ```
+
+# debugging
+```
+composer logs
+```

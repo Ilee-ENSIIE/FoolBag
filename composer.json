@@ -2,7 +2,7 @@
     "name": "ensiie/tp-web",
     "type": "project",
     "scripts": {
-        "project.setup": "./infra/php7install.sh && composer install && composer db.up",
+        "project.setup": "./infra/php7install.sh && ./infra/apache2config.sh && composer install && composer db.up",
         "db.up": "sudo service postgresql start && ./database/up.sh",
         "db.down": "./database/down.sh && sudo service postgresql stop",
         "db.reset": "composer db.down && composer db.up",
@@ -12,7 +12,8 @@
         "test.lint.fix": "php ./vendor/bin/phpcbf ./src",
         "test.md": "./vendor/bin/phpmd ./src text ./phpmd.xml",
         "test.nbsp": "./bin/check_non_breakable_spaces.sh",
-        "test.dependencies": "./bin/check_dependencies.sh"
+        "test.dependencies": "./bin/check_dependencies.sh",
+        "logs": "tail -f ~/lib/apache2/log/*.log"
     },
     "require": {
         "phpunit/phpunit": "^5.7",
