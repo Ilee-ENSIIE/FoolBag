@@ -16,7 +16,7 @@
         "logs": "tail -f ~/lib/apache2/log/*.log"
     },
     "require": {
-        "phpunit/phpunit": "^5.7",
+        "phpunit/phpunit": "^6.0",
         "phpmd/phpmd": "^2.6",
         "squizlabs/php_codesniffer": "^2.7"
     },
