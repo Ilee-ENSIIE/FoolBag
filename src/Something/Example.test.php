@@ -1,8 +1,8 @@
 <?php
 
-namespace AppTest;
+namespace SomethingTest;
 
-use App\Example;
+use Something\Example;
 use PHPUnit\Framework\TestCase;
 
 class ExampleTest extends TestCase

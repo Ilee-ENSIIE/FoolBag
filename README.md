@@ -24,6 +24,7 @@ composer test.lint           # php code sniffer (cs)
 composer test.lint.fix       # php cs-fixer
 composer test.md             # php mess detector (md)
 composer test.dependencies   # check for outdated external dependencies
+composer dump-autoload       # re-dump autoload
 ```
 
 # debugging

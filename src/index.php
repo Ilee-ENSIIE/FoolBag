@@ -1,7 +1,6 @@
 <?php
 require_once(__DIR__ . '/../vendor/autoload.php');
-
-use App\Example;
+use Something\Example;
 
 // test the autoloader
 $example = new Example();

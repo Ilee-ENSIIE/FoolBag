@@ -6,7 +6,7 @@
         "db.up": "sudo service postgresql start && ./database/up.sh",
         "db.down": "./database/down.sh && sudo service postgresql stop",
         "db.reset": "composer db.down && composer db.up",
-        "test": "composer test.nbsp && composer test.unit && composer test.md && composer test.lint && composer test.dependencies",
+        "test": "composer test.nbsp && composer test.unit && composer test.md && composer test.lint",
         "test.unit": "./vendor/bin/phpunit",
         "test.lint": "php ./vendor/bin/phpcs ./src -s",
         "test.lint.fix": "php ./vendor/bin/phpcbf ./src",
@@ -18,16 +18,16 @@
     "require": {
         "phpunit/phpunit": "^6.0",
         "phpmd/phpmd": "^2.6",
-        "squizlabs/php_codesniffer": "^2.7"
+        "squizlabs/php_codesniffer": "^2.8"
     },
     "autoload": {
         "psr-4": {
-            "App\\": "src/App/"
+            "Something\\": "src/Something/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "AppTest\\": "src/App/"
+            "SomethingTest\\": "src/Something/"
         }
     }
 }
