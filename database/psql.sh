@@ -1,3 +1,3 @@
 #!/bin/sh
 
-PGPASSWORD=tp_web psql -U tp_web -h localhost tp_web
+PGPASSWORD=admin psql -U admin -h localhost BagTrip
